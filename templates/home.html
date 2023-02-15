@@ -1,0 +1,61 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jeman_97</title>
+    <link rel="stylesheet" href="{%static 'home.css'%}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="whole_main_thing">
+      <div class="head">
+        <h2>JEMAN</h2>
+        <h4>A Python Developer</h4>
+      </div>
+      <div class="contact">
+        <a href="https://twitter.com/J_6_3_97"> <img id='twitter' src="{% static '5232a863322b46a.png'%}" alt=""> </a>
+        <a href="mailto:mr.j06031997@gmail.com"> <img id='mail' src="{% static '280382_send_pixel_e-mail_email_inbox_icon.png'%}" alt=""> </a>
+        <a href="https://github.com/Jeman1997"> <img id='github' src="{% static 'd7e4e1e509c728d.png'%}" alt=""> </a>
+      </div>
+      <div class="tabs">
+        <form class="tabsform" action="{%url 'homepage'%}" method="post">
+          {%csrf_token%}
+          <p>Filter:</p>
+          <input class='filterops' type="submit" name="button" value="All">
+          <input class='filterops' type="submit" name="button" value="Python">
+          <input class='filterops' type="submit" name="button" value="Django">
+          <input class='filterops' type="submit" name="button" value="WebScraping">
+          <input class='filterops' type="submit" name="button" value="DataAnalysis">
+        </form>
+      </div>
+      <div class="filter">
+        <p>Showing {{req}} projects:</p>
+      </div>
+
+    <div class="projects">
+      {%for x in proj%}
+        <a href="{{x.link}}" class="project">
+            <div >
+                <div class="projecthead">
+                  <h3>{{x.title}}</h3>
+                </div>
+                <div class="projectbod">
+                  <img src='{%static x.image%}' alt="">
+                </div>
+                <div class="projectdet">
+                  <p>{{x.tags}}</p>
+
+                </div>
+            </div>
+          </a>
+          {%endfor%}
+    </div>
+
+    </div>
+  </body>
+</html>
