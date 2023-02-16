@@ -190,12 +190,12 @@ height: auto;
 @media only screen and (max-width:800px) {
 .whole_main_thing,.head,.tabs,.filter,.projects{
   width: 780px;
-  height:900px;
+  height:600px;
 }
 }
 @media only screen and (max-width:400px) {
   .whole_main_thing,.head,.tabs,.filter,.projects{
     width: 350px;
-    height:860px;
+    height:560px;
   }
 }
