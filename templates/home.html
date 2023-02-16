@@ -25,7 +25,7 @@
       <div class="tabs">
         <form class="tabsform" action="{%url 'homepage'%}" method="post">
           {%csrf_token%}
-          <p>Filter:</p>
+          <p class='opsp'>Filter:</p>
           <input class='filterops' type="submit" name="button" value="All">
           <input class='filterops' type="submit" name="button" value="Python">
           <input class='filterops' type="submit" name="button" value="Django">
@@ -34,7 +34,7 @@
         </form>
       </div>
       <div class="filter">
-        <p>Showing {{req}} projects:</p>
+        <p class='opsp'>Showing {{req}} projects:</p>
       </div>
 
     <div class="projects">
