@@ -9,8 +9,6 @@ djangoprojects=[
 pythonprojects=[
                 {'title':'Snake','image':'Snake/Snake.jpeg','tags':['#Python','#Tkinter'],'link':'https://github.com/Jeman1997/Snake-Game'},
                 {'title':'Pong','image':'Pong/Pong.jpeg','tags':['#Python','#Tkinter'],'link':'https://github.com/Jeman1997/Pong'},
-                ]
-webscraping   =[
                 {'title':'Spotify Top 100 Songs','image':'SpotifyScrape/spotifytop100.jpeg','tags':['#Python','#Tkinter','#WebScraping'],'link':''}
                 ]
 def home(request):
@@ -24,6 +22,4 @@ def home(request):
             cont['proj']=djangoprojects
         elif btn=='Python':
             cont['proj']=pythonprojects
-        elif btn=='WebScraping':
-            cont['proj']=webscraping
     return render(request,'home.html',cont)
