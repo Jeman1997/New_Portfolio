@@ -12,12 +12,12 @@ pythonprojects=[
                 {'title':'Spotify Top 100 Songs','image':'SpotifyScrape/spotifytop100.jpeg','tags':['#Python','#Tkinter','#WebScraping'],'link':''}
                 ]
 def home(request):
-    cont={'req':'All','proj':djangoprojects+pythonprojects+webscraping}
+    cont={'req':'All','proj':djangoprojects+pythonprojects}
     if request.method=='POST':
         cont={'req':request.POST['button']}
         btn =request.POST['button']
         if btn=='All':
-            cont['proj']=djangoprojects+pythonprojects+webscraping
+            cont['proj']=djangoprojects+pythonprojects
         elif btn=='Django':
             cont['proj']=djangoprojects
         elif btn=='Python':
